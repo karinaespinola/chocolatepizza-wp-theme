@@ -3,6 +3,7 @@
     function devblog_theme_support() {
         // Add title tag
         add_theme_support('title-tag');
+        add_theme_support('custom-logo');
     }
 
     add_action('after_setup_theme', 'devblog_theme_support');
