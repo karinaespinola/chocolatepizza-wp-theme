@@ -23,7 +23,7 @@
 			?>
 		</a>
         
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
+	    <nav class="navbar navbar-expand-md flex-column navbar-dark" >
            
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
 				if(function_exists('the_custom_logo')) {
 					$custom_logo_id = get_theme_mod('custom_logo');
 					$logo = wp_get_attachment_image_src($custom_logo_id);
-					echo sprintf('<img src="%1s">', $logo[0]);
+					echo sprintf('<div><img src="%1s"></div>', $logo[0]);
 				}
 			?>
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
