@@ -42,4 +42,32 @@
 
     add_filter( 'big_image_size_threshold', '__return_false' );
 
+    function devblog_widget_areas() {
+        register_sidebar(
+            array(
+                'before_title'  => '<ul class="social-list list-inline py-3 mx-auto">',
+                'after_title'   => '</ul>',
+                'before_widget' => '',
+                'after_widget'  => '',           
+                'name'        => 'Sidebar Area',
+                'id'          => 'sidebar-1',
+                'description' => 'Sidebar Widget Area'
+            )
+        );
+
+        register_sidebar(
+            array(
+                'before_title'  => '<ul class="social-list list-inline py-3 mx-auto">',
+                'after_title'   => '</ul>',
+                'before_widget' => '',
+                'after_widget'  => '',           
+                'name'        => 'Footer Area',
+                'id'          => 'footer-1',
+                'description' => 'Sidebar Widget Area'
+            )
+        );
+    }
+
+    add_action('widgets_init', 'devblog_widget_areas');
+
 ?>
